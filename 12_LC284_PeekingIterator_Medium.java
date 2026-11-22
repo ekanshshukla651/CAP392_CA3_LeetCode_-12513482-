@@ -11,15 +11,11 @@ class PeekingIterator implements Iterator<Integer> {
     public Integer peek() {
         return nextElement;
     }
-
-    @Override
     public Integer next() {
         Integer result = nextElement;
         nextElement = iterator.hasNext() ? iterator.next() : null;
         return result;
     }
-
-    @Override
     public boolean hasNext() {
         return nextElement != null;
     }
